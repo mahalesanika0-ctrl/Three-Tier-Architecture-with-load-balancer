@@ -3,7 +3,7 @@
 This project leverages AWS to deploy a scalable and secure three-tier web application, with distinct layers for the presentation, application logic, and data storage.
  
 ## Architecture Overview
-![](./IMG/6260096374053914652.jpg)
+![](/img/6260096374053914652.jpg)
 ## The three-tier architecture divides application responsibilities into clearly defined layers:
 
 * **Web Tier**: Manages HTTP requests, serves static content, and routes dynamic requests to the application layer.
@@ -16,12 +16,12 @@ This project leverages AWS to deploy a scalable and secure three-tier web applic
 ## Networking setup
 At the foundation of the architecture is a custom Amazon VPC, strategically designed with clearly defined public and private subnets to ensure strong network isolation, enhanced security, and granular traffic control.
 
-![](./IMG/Screenshot%20(14).png)
-![](./IMG/Screenshot%20(13).png)
-![](./IMG/6260084446929735162.jpg)
-![](./IMG/Screenshot%20(18).png)
-![](./IMG/Screenshot%20(19).png)
-![](./IMG/6260084446929735163.jpg)
+![](/img/Screenshot%20(14).png)
+![](/img/Screenshot%20(13).png)
+![](/img/6260084446929735162.jpg)
+![](/img/Screenshot%20(18).png)
+![](/img/Screenshot%20(19).png)
+![](/img/6260084446929735163.jpg)
 
 # Web Tier Components
 
@@ -33,7 +33,7 @@ At the foundation of the architecture is a custom Amazon VPC, strategically desi
 * **Internet-Facing Application Load Balancer (ALB)**: Distributes incoming HTTP/HTTPS traffic evenly across instances to improve performance and fault tolerance.
 
 * **Custom Amazon Machine Image (AMI)**: Ensures consistent, repeatable, and version-controlled deployments across all EC2 instances.
-![](./IMG/6260084446929735165%20(1).jpg)
+![](/img/6260084446929735165%20(1).jpg)
 
 # Application Tier
 ## The Application Tier includes the following components:
@@ -43,8 +43,8 @@ At the foundation of the architecture is a custom Amazon VPC, strategically desi
 * **Internal Application Load Balancer (ALB)**: Distributes traffic received from the Web Tier across the application instances within private subnets.
 
 * **Custom Amazon Machine Image (AMI)**: Guarantees consistent, reliable, and repeatable deployments of the application code across all instances.
-![](./IMG/6260084446929735167.jpg)
-![](./IMG/6260084446929735168.jpg)
+![](/img/6260084446929735167.jpg)
+![](/img/6260084446929735168.jpg)
 
 
 # Database Tier
@@ -55,8 +55,8 @@ At the foundation of the architecture is a custom Amazon VPC, strategically desi
 * **Multi-AZ Deployment**: Ensures high availability with automatic failover across availability zones.
 
 * **Automated Backups and Monitoring**: Provides continuous data protection, point-in-time recovery, and proactive health monitoring.
-![](./IMG/Screenshot%20(16).png)
-![](./IMG/6260084446929735170.jpg)
+![](/img/Screenshot%20(16).png)
+![](/img/6260084446929735170.jpg)
 
 # Content Delivery and Storage
 ## To optimize performance and scalability, the architecture includes:
@@ -64,7 +64,7 @@ At the foundation of the architecture is a custom Amazon VPC, strategically desi
 * **Amazon CloudFront**: A global content delivery network (CDN) that accelerates content delivery by caching static assets at edge locations worldwide.
 
 * **Application Load Balancer**: Distributes incoming traffic across multiple web servers, efficiently handling both static and dynamic content to improve responsiveness and fault tolerance.
-![](./IMG/6260084446929735172.jpg)
+![](/img/6260084446929735172.jpg)
 
 # Implementation Steps
 
@@ -155,5 +155,6 @@ At the foundation of the architecture is a custom Amazon VPC, strategically desi
 * Implementing **Auto Scaling** for elasticity,
 
 * And applying strict **security controls** through VPC design and security groups.
+
 
 Unlike architectures that depend on Amazon S3 for static content storage, this solution serves all content directly from EC2 instances, providing complete control over the application stack.
